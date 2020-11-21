@@ -28,6 +28,9 @@ $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 # Device Path
 DEVICE_PATH := device/xiaomi/clover
 
+# For clover in SDM600
+DEVICE_CLOVER_WIFI := true
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
@@ -39,6 +42,11 @@ TARGET_SCREEN_WIDTH := 1200
 
 # Device properties
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service
 
 # HW crypto
 PRODUCT_PACKAGES += \
