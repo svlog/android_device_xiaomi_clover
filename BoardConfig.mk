@@ -27,7 +27,7 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 DEVICE_PATH := device/xiaomi/clover
 
 # Screen Density
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 320
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchscreen/enable_dt2w"
